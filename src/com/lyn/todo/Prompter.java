@@ -1,5 +1,6 @@
 package com.lyn.todo;
 
+// The Prompter gives the user the list of options.
 public class Prompter {
 	public static void ask() {
 		System.out.println("What would you like to do?\n");

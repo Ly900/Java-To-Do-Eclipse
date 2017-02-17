@@ -2,6 +2,7 @@ package com.lyn.todo;
 
 import java.util.Scanner;
 
+// This class starts the program.
 public class ToDo {
 	private static boolean appStarted = true;
 	

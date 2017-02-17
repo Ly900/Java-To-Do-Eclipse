@@ -2,12 +2,14 @@ package com.lyn.todo;
 
 import java.util.Scanner;
 
+// The Options class executes the logic depending on the user's choice. Choices asked in Prompter class.
+
 public class Options {
 
 	public static void giveChoices(ToDoList list) {
 		Scanner userInput = new Scanner(System.in);
 		int input = userInput.nextInt();
-
+		
 		// Check user's choice for viewing or adding to list.
 		switch (input) {
 		// View list.

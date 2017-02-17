@@ -10,11 +10,13 @@ public class ToDoList {
 		toDoList = new ArrayList<String>(); 
 	}
 	
+	// Add to do's to the list.
 	public void addToDo(String input) {
 		this.toDoList.add(input);
 		System.out.println(input + " added.\n"); 
 	}
 	
+	// Prints out entire list.
 	public void getList() {
 		System.out.println("\nYour To Do List: \n");
 		System.out.println("----------\n");
@@ -27,11 +29,13 @@ public class ToDoList {
 		System.out.println("\n----------\n");
 	}
 
+	// Removes a to do from the list.
 	public void remove(int removeInt) {
 		this.toDoList.remove(removeInt - 1);
 		
 	}
 	
+	// Changes a to do to something else.
 	public void editToDo(int index, String revisedToDo) {
 		this.toDoList.set(index, revisedToDo);
 	}
