@@ -31,5 +31,9 @@ public class ToDoList {
 		this.toDoList.remove(removeInt - 1);
 		
 	}
+	
+	public void editToDo(int index, String revisedToDo) {
+		this.toDoList.set(index, revisedToDo);
+	}
 
 }

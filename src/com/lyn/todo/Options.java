@@ -16,21 +16,30 @@ public class Options {
 			break;
 		// Add to do.
 		case 2:
-			System.out.println("You entered 2.\n");
 			System.out.print("What would you like to add to your list? ");
 			Scanner sc = new Scanner(System.in);
 			String toDoItem = sc.nextLine();
 			list.addToDo(toDoItem);
 			break;
-		// Remove to do.
+		// Edit to do.
 		case 3:
+			System.out.println("Which to do would you like to edit?");
+			Scanner sc2 = new Scanner(System.in);
+			int intOfToDo = sc2.nextInt();
+			System.out.println("What would you like the to do changed to?");
+			Scanner sc3 = new Scanner(System.in);
+			String editedToDo = sc3.nextLine();
+			list.editToDo(intOfToDo - 1, editedToDo);
+			break;
+		// Remove to do.
+		case 4:
 			System.out.println("Which \"to do\" would you like to remove?");
 			Scanner remove = new Scanner(System.in);
 			int removeInt = remove.nextInt();
 			list.remove(removeInt);
 			break;
 		// Quit.
-		case 4:
+		case 5:
 			System.out.println("Good-bye!");
 			ToDo.progIsRunning(false); 
 			break;
