@@ -30,14 +30,18 @@ public class ToDoList {
 	}
 
 	// Removes a to do from the list.
-	public void remove(int removeInt) {
-		this.toDoList.remove(removeInt - 1);
+	public void remove(String removeInt) {
+		this.toDoList.remove(Integer.parseInt(removeInt) - 1);
 		
 	}
 	
 	// Changes a to do to something else.
 	public void editToDo(int index, String revisedToDo) {
 		this.toDoList.set(index, revisedToDo);
+	}
+	
+	public void getItem(int index) {
+		System.out.print(toDoList.get(index));
 	}
 
 }
