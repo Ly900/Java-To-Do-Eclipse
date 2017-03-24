@@ -1,5 +1,6 @@
 package com.lyn.todo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // The Options class executes the logic depending on the user's choice, with choices given by the Prompter class.
@@ -7,13 +8,15 @@ public class Options {
 
 	public static void giveChoices(ToDoList list) {
 		Scanner userInput = new Scanner(System.in);
+
+		try {
 		int input = userInput.nextInt();
 
 		// Check user's choice for viewing or adding to list.
+
 		switch (input) {
 		// View list.
 		case 1:
-			System.out.println("hi");
 			list.getList();
 			break;
 		// Add to do.
@@ -50,8 +53,11 @@ public class Options {
 			userInput.close();
 			break;
 		default:
-			System.out.println("I don't understand what you entered.");
+			System.out.println("Please choose a number from the available options.");
 			break;
+		}
+		} catch (InputMismatchException ie) {
+			System.out.println("Please input a number.");
 		}
 	}
 }
